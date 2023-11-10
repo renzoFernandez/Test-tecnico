@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="facultad.inscripcion_list_view">
+            <field name="name">facultad.inscripcion.view.tree</field>
+            <field name="model">facultad.inscripcion</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="alumno_id"/>
+                    <field name="programa_id"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="facultad.inscripcion_action_window">
+            <field name="name">Inscripciones</field>
+            <field name="res_model">facultad.inscripcion</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+    </data>
+</odoo>

@@ -1,0 +1,21 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="facultad.programa_list_view">
+            <field name="name">facultad.programa.view.tree</field>
+            <field name="model">facultad.programa</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="descripcion"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="facultad.programa_action_window">
+            <field name="name">Programas</field>
+            <field name="res_model">facultad.programa</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+    </data>
+</odoo>

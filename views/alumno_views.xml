@@ -1,0 +1,25 @@
+<odoo>
+    <data>
+        <record model="ir.ui.view" id="facultad.alumno_list_view">
+            <field name="name">facultad.alumno.view.tree</field>
+            <field name="model">facultad.alumno</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="apellido"/>
+                    <field name="legajo"/>
+                    <field name="fecha_nacimiento"/>
+                    <field name="email"/>
+                    <field name="telefono"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="facultad.alumno_action_window">
+            <field name="name">Alumnos</field>
+            <field name="res_model">facultad.alumno</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+        
+    </data>
+</odoo>

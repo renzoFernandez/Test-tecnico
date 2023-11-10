@@ -1,0 +1,14 @@
+<odoo>
+    <data>
+            <!-- Top menu item -->
+
+    <menuitem name="Facultad" id="facultad.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Alumno" id="facultad.alumno_menu" parent="facultad.menu_root" action="facultad.alumno_action_window"/>
+    <menuitem name="Programa" id="facultad.programa_menu" parent="facultad.menu_root" action="facultad.programa_action_window"/>
+    <menuitem name="Inscripcion" id="facultad.inscripcion_menu" parent="facultad.menu_root" action="facultad.inscripcion_action_window"/>
+    
+    </data>
+</odoo>

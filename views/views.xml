@@ -1,0 +1,93 @@
+<odoo>
+  <data>
+
+    <!-- server action to the one above -->
+<!--
+    <record model="ir.actions.server" id="facultad.action_server">
+      <field name="name">Facultad server</field>
+      <field name="model_id" ref="model_facultad_facultad"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": model._name,
+        }
+      </field>
+    </record>
+-->
+    <!-- VISTA DE ALUMNO-->
+
+    <record model="ir.ui.view" id="facultad.alumno_list_view">
+      <field name="name">facultad.alumno.view.tree</field>
+      <field name="model">facultad.alumno</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="apellido"/>
+          <field name="legajo"/>
+          <field name="fecha_nacimiento"/>
+          <field name="email"/>
+          <field name="telefono"/>
+        </tree>
+      </field>
+    </record>
+    <!-- VISTA DE PROGRAMA-->
+    <record model="ir.ui.view" id="facultad.programa_list_view">
+      <field name="name">facultad.programa.view.tree</field>
+      <field name="model">facultad.programa</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="nombre"/>
+          <field name="descripcion"/>
+        </tree>
+      </field>
+    </record>
+    
+    <!-- VISTA DE INSCRIPCION -->
+    <record model="ir.ui.view" id="facultad.inscripcion_list_view">
+      <field name="name">facultad.inscripcion.view.tree</field>
+      <field name="model">facultad.inscripcion</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="alumno_id"/>
+          <field name="programa_id"/>
+        </tree>
+      </field>
+    </record>
+
+        <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="facultad.alumno_action_window">
+      <field name="name">Alumnos</field>
+      <field name="res_model">facultad.alumno</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="facultad.programa_action_window">
+      <field name="name">Programas</field>
+      <field name="res_model">facultad.programa</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+    <record model="ir.actions.act_window" id="facultad.inscripcion_action_window">
+      <field name="name">Inscripciones</field>
+      <field name="res_model">facultad.inscripcion</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="Facultad" id="facultad.menu_root"/>
+
+    <!-- menu categories -->
+
+    <menuitem name="Alumno" id="facultad.alumno_menu" parent="facultad.menu_root" action="facultad.alumno_action_window"/>
+    <menuitem name="Programa" id="facultad.programa_menu" parent="facultad.menu_root" action="facultad.programa_action_window"/>
+    <menuitem name="Inscripcion" id="facultad.inscripcion_menu" parent="facultad.menu_root" action="facultad.inscripcion_action_window"/>
+
+
+
+
+  </data>
+</odoo>

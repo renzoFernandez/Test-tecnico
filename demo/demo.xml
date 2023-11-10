@@ -1,0 +1,64 @@
+<odoo>
+    <data>
+          <record id="alumno1" model="facultad.alumno">
+            <field name="nombre">Renzo</field>
+            <field name="apellido">Fernandez</field>
+            <field name="legajo">4052</field>
+            <field name="fecha_nacimiento">2000-05-16</field>
+            <field name="email">renzofer@hasd.com</field>
+            <field name="telefono">251651981</field>
+          </record>
+
+          <record id="alumno2" model="facultad.alumno">
+            <field name="nombre">Pedro</field>
+            <field name="apellido">Perez</field>
+            <field name="legajo">4022</field>
+            <field name="fecha_nacimiento">2005-07-16</field>
+            <field name="email">pediro@hot.go</field>
+            <field name="telefono">5215129</field>
+          </record>
+
+          <record id="alumno3" model="facultad.alumno">
+            <field name="nombre">Romina</field>
+            <field name="apellido">Garcia</field>
+            <field name="legajo">4078</field>
+            <field name="fecha_nacimiento">1996-02-25</field>
+            <field name="email">roma@gar.com</field>
+            <field name="telefono">78126826</field>
+          </record>
+
+          <record id="programa1" model="facultad.programa">
+            <field name="nombre">Matematicas</field>
+            <field name="descripcion">Materia sobre numeros</field>
+
+          </record>
+
+          <record id="programa2" model="facultad.programa">
+            <field name="nombre">Legislatura</field>
+            <field name="descripcion">Materia sobre derechos de las personas</field>
+
+          </record>
+
+          <record id="programa2" model="facultad.programa">
+            <field name="nombre">Legislatura</field>
+            <field name="descripcion">Materia sobre derechos de las personas</field>
+          </record>
+
+          <record id="inscripcion1" model="facultad.inscripcion">
+            <field name="alumno_id" ref="alumno1"/>
+            <field name="programa_id" ref="programa1"/>
+          </record>
+
+          <record id="inscripcion2" model="facultad.inscripcion">
+            <field name="alumno_id" ref="alumno1"/>
+            <field name="programa_id" ref="programa2"/>
+          </record>
+            
+          <record id="inscripcion3" model="facultad.inscripcion">
+            <field name="alumno_id" ref="alumno2"/>
+            <field name="programa_id" ref="programa1"/>
+          </record>
+
+          
+    </data>
+</odoo>
