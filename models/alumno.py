@@ -10,6 +10,7 @@ class alumno(models.Model):
     fecha_nacimiento = fields.Date()
     email = fields.Char()
     telefono = fields.Integer()
+    
 
 
     inscripcion_ids = fields.One2many('facultad.inscripcion','alumno_id',string='inscripciones')

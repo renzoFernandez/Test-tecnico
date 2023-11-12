@@ -11,6 +11,7 @@
                     <field name="fecha_nacimiento"/>
                     <field name="email"/>
                     <field name="telefono"/>
+                    <field name="pais"/>
                 </tree>
             </field>
         </record>

@@ -1,2 +1,4 @@
 id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-access_facultad_facultad,facultad.facultad,model_facultad_facultad,base.group_user,1,1,1,1
+access_facultad_alumno_usuario,facultad.alumno.usuario,model_facultad_alumno,facultad.group_facultad_usuario,1,1,1,1
+access_facultad_programa_usuario,facultad.programa.usuario,model_facultad_programa,facultad.group_facultad_usuario,1,0,0,0
+access_facultad_inscripcion_recepcionista,facultad.inscripcion.recepcionista,model_facultad_inscripcion,facultad.group_facultad_recepcionista,1,1,1,1

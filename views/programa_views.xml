@@ -11,6 +11,24 @@
             </field>
         </record>
 
+        <record model="ir.ui.view" id="facultad.programa_form_view">
+            <field name="name">facultad.programa.view.form</field>
+            <field name="model">facultad.programa</field>
+            <field name="arch" type="xml">
+                <form>
+                    <header>
+                        <button type="object" name="action_test" string="Alumnos inscriptos"/>
+                    </header>
+                    <sheet>
+                        <group>
+                            <field name="nombre"/>
+                            <field name="descripcion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        
         <record model="ir.actions.act_window" id="facultad.programa_action_window">
             <field name="name">Programas</field>
             <field name="res_model">facultad.programa</field>
